@@ -4,11 +4,17 @@ This dataset contains information on customer demographics, account details, and
 Key Features:
 
 Customer Demographics: Age, gender, location, and customer segment
+
 Account Information: Tenure, contract type, payment method, monthly and total charges
+
 Service Usage: Product subscriptions, service usage metrics, and support interactions
+
 Churn Label: Binary indicator (1 = churned, 0 = retained)
 
 Use Cases:
+
 Predicting customer churn using machine learning models
+
 Performing exploratory data analysis (EDA) to identify at-risk customers
+
 Evaluating the impact of customer behavior and demographics on retention
