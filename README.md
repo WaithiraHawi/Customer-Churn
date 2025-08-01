@@ -18,3 +18,5 @@ Predicting customer churn using machine learning models
 Performing exploratory data analysis (EDA) to identify at-risk customers
 
 Evaluating the impact of customer behavior and demographics on retention
+
+share the breakdown
