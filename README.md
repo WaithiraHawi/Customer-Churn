@@ -1,22 +1,36 @@
 # Customer-Churn
-This dataset contains information on customer demographics, account details, and service usage, along with a churn indicator showing whether a customer discontinued the service. It is designed for churn prediction and retention analysis, enabling businesses to identify patterns leading to customer attrition.
+The dataset contains 10,000 customer records with 18 columns.
 
 Key Features:
+Target Variable: Exited (1 = churned, 0 = retained)
 
-Customer Demographics: Age, gender, location, and customer segment
+Demographics: Age, Gender, Geography
 
-Account Information: Tenure, contract type, payment method, monthly and total charges
+Account Info: CreditScore, Tenure, Balance, NumOfProducts, EstimatedSalary
 
-Service Usage: Product subscriptions, service usage metrics, and support interactions
+Behavioral: HasCrCard, IsActiveMember, Complain, Satisfaction Score, Point Earned
 
-Churn Label: Binary indicator (1 = churned, 0 = retained)
+Categorical: Card Type, Surname
 
-Use Cases:
+Analysis:
+Exploratory Data Analysis (EDA):
 
-Predicting customer churn using machine learning models
+Churn rate
 
-Performing exploratory data analysis (EDA) to identify at-risk customers
+Distribution of numerical features
 
-Evaluating the impact of customer behavior and demographics on retention
+Churn by geography, gender, and card type
 
-share the breakdown
+Feature Engineering:
+
+Encoding categorical variables
+
+Check correlations
+
+Modeling:
+
+Train a churn prediction model (Logistic Regression or XGBoost)
+
+Evaluate performance (accuracy, precision, recall)
+
+Feature importance
