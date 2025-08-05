@@ -1,36 +1,64 @@
-# Customer-Churn
-The dataset contains 10,000 customer records with 18 columns.
+# Customer Churn Analysis
 
-Key Features:
-Target Variable: Exited (1 = churned, 0 = retained)
+This project performs exploratory data analysis and predictive modeling on a bank's customer dataset to identify patterns related to customer churn. It explores key factors that influence customer retention and builds models to predict whether a customer is likely to leave the bank.
 
-Demographics: Age, Gender, Geography
 
-Account Info: CreditScore, Tenure, Balance, NumOfProducts, EstimatedSalary
+## Dataset
+* Size: 10,000 rows × 18 columns
+* Features:
+  * Customer demographics (e.g., Age, Gender, Geography)
+  * Account details (e.g., Balance, Tenure, NumOfProducts)
+  * Engagement metrics (e.g., CreditScore, Complain, Satisfaction Score)
+  * Churn status (`Exited`: 1 = Yes, 0 = No)
 
-Behavioral: HasCrCard, IsActiveMember, Complain, Satisfaction Score, Point Earned
+## Project Workflow
 
-Categorical: Card Type, Surname
+### **Data Loading and Inspection**
 
-Analysis:
-Exploratory Data Analysis (EDA):
+* Loaded data using `pandas`
+* Checked data structure using `.info()` and `.head()`
 
-Churn rate
+### **Exploratory Data Analysis (EDA)**
 
-Distribution of numerical features
+Key visualizations:
 
-Churn by geography, gender, and card type
+* Customer Churn Distribution
+* Churn by Gender
+* Churn by Geography
+* Age Distribution by Churn
+* Feature Correlation Heatmap
 
-Feature Engineering:
+## KPIs & Insights
 
-Encoding categorical variables
+| KPI / Feature          | Insight                                                |
+| ---------------------- | ------------------------------------------------------ |
+| **Exited**             | Binary churn indicator (0 = stayed, 1 = left)          |
+| **Gender**             | Compared churn patterns across genders                 |
+| **Geography**          | Evaluated churn rates by country                       |
+| **Age**                | Older customers showed a higher likelihood of churning |
+| **Credit Score**       | Weak correlation with churn                            |
+| **Satisfaction Score** | Lower scores were associated with higher churn         |
 
-Check correlations
+## Data Preprocessing
 
-Modeling:
+* Dropped unnecessary identifier: `customerID` (if present)
+* No missing values were detected
+* Labelled encoded categorical features (`Gender`, `Geography`, `Card Type`, `Surname`)
+* Feature scaling and correlation analysis
 
-Train a churn prediction model (Logistic Regression or XGBoost)
+## Technologies Used
 
-Evaluate performance (accuracy, precision, recall)
+| Tool                     | Purpose                            |
+| ------------------------ | ---------------------------------- |
+| `Pandas`                 | Data loading and manipulation      |
+| `Matplotlib` & `Seaborn` | Visualizations                     |
+| `Scikit-learn`           | Encoding, modeling, and evaluation |
+| `Jupyter Notebook`       | Interactive development            |
 
-Feature importance
+## Recommendations
+
+* Focus retention efforts on:
+  * Older customers with lower satisfaction
+  * Customers in specific geographies (e.g., countries with high churn)
+* Integrate churn prediction into CRM for real-time alerts
+* Offer loyalty incentives to high-risk segments
